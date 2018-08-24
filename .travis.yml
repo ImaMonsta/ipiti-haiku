@@ -13,6 +13,7 @@ cache:
   bundler: true
   directories:
     - node_modules # NPM packages
+    - functions/node_modules
 
 install:
   - npm set progress=false
