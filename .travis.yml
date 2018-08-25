@@ -15,6 +15,9 @@ cache:
     - node_modules # NPM packages
     - functions/node_modules
 
+before_install:
+  - bash ./scripts/version.sh $TRAVIS_COMMIT
+
 install:
   - npm set progress=false
   - npm i
