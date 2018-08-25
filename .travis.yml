@@ -3,12 +3,12 @@ sudo: false
 language: node_js
 
 node_js:
- - node 
- 
+  - node
+
 branches:
   only:
     - master
-    
+
 cache:
   bundler: true
   directories:
@@ -21,6 +21,7 @@ install:
   - cd functions && npm i ; cd -
 
 script:
+  - CI=true npx react-scripts test --env=jsdom
   - npm run build
 
 after_success:
