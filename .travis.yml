@@ -17,6 +17,7 @@ cache:
 
 before_install:
   - bash ./scripts/version.sh $TRAVIS_COMMIT
+  - bash ./scripts/sentry.sh $SENTRY_TOKEN $TRAVIS_COMMIT imamonsta/ipiti-haiku ipiti-haiku
 
 install:
   - npm set progress=false
