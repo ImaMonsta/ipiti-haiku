@@ -5,9 +5,12 @@
         "prettier/prettier": ["error"],
         "react/prefer-stateless-function": [false, {
             "ignorePureComponents": false
+        }],
+        "react/jsx-filename-extension": [1, {
+            "extensions": [".js", ".jsx"]
         }]
-
     },
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "jest": true

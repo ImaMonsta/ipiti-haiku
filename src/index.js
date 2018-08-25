@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+//  import jquery from 'jquery';
+//  import metismenu from 'metismenu';
+//  import bootstrap from 'bootstrap';
+
+import Main from './views/Main';
+
+ReactDOM.render(<Main />, document.getElementById('root'));
