@@ -32,7 +32,6 @@ class Main extends Component {
             </a>
           </form>
           <p className="m-t">
-            {' '}
             <small>Ipiti Haiku &copy; 2018</small>
           </p>
         </div>
