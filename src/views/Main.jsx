@@ -10,7 +10,14 @@ class Main extends Component {
           </div>
           <h3>Welcome to IH+</h3>
           <p>Login in. To see it in action.</p>
-          <form className="m-t" action="index.html">
+          <a href=" " className="btn btn-block btn-social btn-foursquare">
+            <span className="fab fa-google" />
+            Sign in with Google
+          </a>
+          <p className="m-t">
+            <small>Or try</small>
+          </p>
+          <form className="m-t">
             <div className="form-group">
               <input type="email" className="form-control" placeholder="Username" required="" />
             </div>
@@ -20,7 +27,6 @@ class Main extends Component {
             <button type="submit" className="btn btn-primary block full-width m-b">
               Login
             </button>
-
             <a href=" ">
               <small>Forgot password?</small>
             </a>
