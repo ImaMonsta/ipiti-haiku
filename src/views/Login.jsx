@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { loginGoogle } from '../components/util/Auth';
 
-class Main extends Component {
+class Login extends Component {
+  onLogin = () => {
+    loginGoogle();
+  };
+
   render() {
     return (
       <div className="middle-box text-center loginscreen animated fadeInDown">
@@ -10,10 +15,10 @@ class Main extends Component {
           </div>
           <h3>Welcome to IH+</h3>
           <p>Login in. To see it in action.</p>
-          <a href=" " className="btn btn-block btn-social btn-foursquare">
+          <button type="button" className="btn btn-block btn-social btn-foursquare" onClick={this.onLogin}>
             <span className="fab fa-google" />
             Sign in with Google
-          </a>
+          </button>
           <p className="m-t">
             <small>Or try</small>
           </p>
@@ -46,4 +51,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Login;
