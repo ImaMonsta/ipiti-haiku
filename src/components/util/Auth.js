@@ -13,10 +13,10 @@ export const logout = async () => {
   console.log(signout);
 };
 
-const currentUser = () => {
-  firebase.auth().onAuthStateChanged(user => {
-    console.log(user);
+export const currentUser = async () => {
+  const userPromise = new Promise(resolve => {
+    firebase.auth().onAuthStateChanged(result => resolve(result));
   });
+  const user = await userPromise;
+  return user;
 };
-
-export default currentUser;

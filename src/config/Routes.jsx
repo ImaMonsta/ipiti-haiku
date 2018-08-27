@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Auth from '../components/util/Auth';
-import Main from '../views/Login';
+import { currentUser } from '../components/util/Auth';
+import Login from '../views/Login';
 import Home from '../views/Home';
 
 class Routes extends Component {
   constructor(props) {
     super(props);
-    this.state = { user: Auth() };
+    currentUser().then(user => this.setState({ user }));
   }
 
   render() {
     const { user } = this.state;
+    const home = user ? Home : Login;
     return (
       <Router>
-        <div>{user ? <Route path="/" component={Main} /> : <Route path="/" component={Home} />}</div>
+        <div>
+          <Route path="/" component={home} />
+        </div>
       </Router>
     );
   }
