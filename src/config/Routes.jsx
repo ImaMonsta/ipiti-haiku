@@ -7,6 +7,10 @@ import Home from '../views/Home';
 class Routes extends Component {
   constructor(props) {
     super(props);
+    this.state = { user: undefined };
+  }
+
+  componentWillMount() {
     currentUser().then(user => this.setState({ user }));
   }
 
