@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <div id="wrapper">
-        <nav className="navbar-default navbar-static-side" role="navigation">
+        <nav className="navbar-default navbar-static-side">
           <div className="sidebar-collapse">
             <ul className="nav metismenu" id="side-menu">
               <li className="nav-header">
@@ -71,7 +71,7 @@ class Home extends Component {
 
         <div id="page-wrapper" className="gray-bg">
           <div className="row border-bottom">
-            <nav className="navbar navbar-static-top white-bg" role="navigation" style={{ 'margin-bottom': 0 }}>
+            <nav className="navbar navbar-static-top white-bg" style={{ 'margin-bottom': 0 }}>
               <div className="navbar-header">
                 <a className="navbar-minimalize minimalize-styl-2 btn btn-primary " href=" ">
                   <i className="fa fa-bars" />{' '}
