@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import { loginGoogle } from '../components/util/Auth';
+import Center from '../components/layouts/Center';
 
 class Login extends Component {
-  onLogin = () => {
-    loginGoogle();
-  };
-
   render() {
     return (
-      <div className="middle-box text-center loginscreen animated fadeInDown">
-        <div>
+      <Center>
+        <div className="loginscreen">
           <div>
             <h1 className="logo-name">IH+</h1>
           </div>
           <h3>Welcome to IH+</h3>
           <p>Login in. To see it in action.</p>
-          <button type="button" className="btn btn-block btn-social btn-foursquare" onClick={this.onLogin}>
+          <button type="button" className="btn btn-block btn-social btn-foursquare" onClick={loginGoogle}>
             <span className="fab fa-google" />
             Sign in with Google
           </button>
@@ -46,7 +43,7 @@ class Login extends Component {
             <small>Ipiti Haiku &copy; 2018</small>
           </p>
         </div>
-      </div>
+      </Center>
     );
   }
 }

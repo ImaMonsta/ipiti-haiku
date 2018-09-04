@@ -3,6 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error"],
+    "react/forbid-prop-types": [false],
     "react/prefer-stateless-function": [
       false,
       {
