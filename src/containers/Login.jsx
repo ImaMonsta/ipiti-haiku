@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { loginGoogle } from '../components/util/Auth';
+import PropTypes from 'prop-types';
 import Center from '../components/layouts/Center';
 
 class Login extends Component {
   render() {
+    const { loginGoogle } = this.props;
     return (
       <Center>
         <div className="loginscreen">
@@ -47,5 +48,9 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  loginGoogle: PropTypes.func.isRequired
+};
 
 export default Login;

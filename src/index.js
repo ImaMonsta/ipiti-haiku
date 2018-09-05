@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Raven from 'raven-js';
 import firebase from 'firebase/app';
-import Routes from './config/Routes';
+import Root from './config/Root';
 
 Raven.config('https://8ab951e8d78f4b3d8de1ca4b641b50fb@sentry.io/1265167', {
   // 👾
@@ -19,4 +19,4 @@ const config = {
 
 firebase.initializeApp(config);
 
-ReactDOM.render(<Routes />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));

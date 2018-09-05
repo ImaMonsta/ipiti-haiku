@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { logout } from '../components/util/Auth';
+import PropTypes from 'prop-types';
 
 class Home extends Component {
   render() {
+    const { logout } = this.props;
     return (
       <div id="wrapper">
         <nav className="navbar-default navbar-static-side">
@@ -235,5 +236,8 @@ class Home extends Component {
     );
   }
 }
+Home.propTypes = {
+  logout: PropTypes.func.isRequired
+};
 
 export default Home;

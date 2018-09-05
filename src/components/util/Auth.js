@@ -1,16 +1,15 @@
+import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
 export const loginGoogle = async () => {
   const gProvider = new firebase.auth.GoogleAuthProvider();
-
   const { user } = await firebase.auth().signInWithPopup(gProvider);
-  console.log(user);
+  return user;
 };
 
 export const logout = async () => {
-  const signout = await firebase.auth().signOut();
-  console.log(signout);
+  await firebase.auth().signOut();
 };
 
 export const currentUser = async () => {
@@ -20,3 +19,9 @@ export const currentUser = async () => {
   const user = await userPromise;
   return user;
 };
+
+export const AuthContext = React.createContext({
+  user: undefined,
+  checkCurrentUser: () => {},
+  loginGoogle: () => {}
+});
