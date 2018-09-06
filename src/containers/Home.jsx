@@ -72,7 +72,7 @@ class Home extends Component {
 
         <div id="page-wrapper" className="gray-bg">
           <div className="row border-bottom">
-            <nav className="navbar navbar-static-top white-bg" style={{ 'margin-bottom': 0 }}>
+            <nav className="navbar navbar-static-top white-bg" style={{ marginBottom: 0 }}>
               <div className="navbar-header">
                 <a className="navbar-minimalize minimalize-styl-2 btn btn-primary " href=" ">
                   <i className="fa fa-bars" />{' '}
