@@ -1,4 +1,3 @@
-import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -19,9 +18,3 @@ export const currentUser = async () => {
   const user = await userPromise;
   return user;
 };
-
-export const AuthContext = React.createContext({
-  user: undefined,
-  checkCurrentUser: () => {},
-  loginGoogle: () => {}
-});

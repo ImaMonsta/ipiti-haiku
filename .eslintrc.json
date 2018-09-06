@@ -16,7 +16,8 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "react/jsx-one-expression-per-line": [false, {}]
+    "react/jsx-one-expression-per-line": [false, {}],
+    "react/no-unused-state": [false, {}]
   },
   "parser": "babel-eslint",
   "env": {
