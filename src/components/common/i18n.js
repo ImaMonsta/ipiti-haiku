@@ -24,11 +24,11 @@ i18next.init({
         password: 'Contrasenia',
         login: {
           welcome: 'Bienvenido to IH+',
-          message: 'Inicia sesion. Para verlo en acción.',
+          message: 'Inicia sesión. Para verlo en acción.',
           googleSignin: 'Inicia sesion con Google',
           orTry: 'O intenta',
           sigin: 'Inicia sesion',
-          forgotPassword: 'Olvido su contrasenia?',
+          forgotPassword: 'Olvido su contraseña?',
           notHaveAccount: 'No tiene una cuenta?',
           createAccount: 'Crear cuenta'
         }

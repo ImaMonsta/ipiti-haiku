@@ -17,10 +17,10 @@ export class Login extends Component {
         <div className="loginscreen">
           {/* This is just for demo purposes */}
           <button type="button" onClick={() => changeLanguage('en')}>
-            es
+            Enghlish
           </button>
           <button type="button" onClick={() => changeLanguage('es')}>
-            es
+            Español
           </button>
 
           <div>
