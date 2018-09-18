@@ -15,7 +15,7 @@ export class Login extends Component {
     return (
       <Center>
         <div className="loginscreen">
-          {/* This is just for demo purposes */}
+          <p>{t('login.chooseLanguage')}</p>
           <button type="button" onClick={() => changeLanguage('en')}>
             Enghlish
           </button>

@@ -7,6 +7,7 @@ i18next.init({
         username: 'Username',
         password: 'Password',
         login: {
+          chooseLanguage: 'Choose your language',
           welcome: 'Welcome to IH+',
           message: 'Login in. To see it in action.',
           googleSignin: 'Sign in with Google',
@@ -23,6 +24,7 @@ i18next.init({
         username: 'Usuario',
         password: 'Contrasenia',
         login: {
+          chooseLanguage: 'Selecciona tu idioma',
           welcome: 'Bienvenido to IH+',
           message: 'Inicia sesión. Para verlo en acción.',
           googleSignin: 'Inicia sesion con Google',
