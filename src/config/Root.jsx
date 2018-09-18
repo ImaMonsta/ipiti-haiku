@@ -1,10 +1,12 @@
 /* global document */
 import React, { Component } from 'react';
+import { I18nextProvider } from 'react-i18next';
 import Loader from './Loader';
 import AppContext from './AppContext';
 import { loginGoogle, currentUser, logout } from '../components/util/Auth';
 import Center from '../components/layouts/Center';
 import Spinner from '../components/common/Spinner';
+import i18next from '../components/common/i18n';
 
 class Root extends Component {
   constructor(props) {
@@ -53,15 +55,17 @@ class Root extends Component {
   render() {
     const { loading } = this.state;
     return (
-      <AppContext.Provider value={this.state}>
-        {loading ? (
-          <Center>
-            <Spinner />
-          </Center>
-        ) : (
-          <Loader />
-        )}
-      </AppContext.Provider>
+      <I18nextProvider i18n={i18next}>
+        <AppContext.Provider value={this.state}>
+          {loading ? (
+            <Center>
+              <Spinner />
+            </Center>
+          ) : (
+            <Loader />
+          )}
+        </AppContext.Provider>
+      </I18nextProvider>
     );
   }
 }

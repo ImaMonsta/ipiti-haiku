@@ -1,43 +1,58 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
+
 import Center from '../components/layouts/Center';
 
-class Login extends Component {
+export class Login extends Component {
   render() {
-    const { loginGoogle } = this.props;
+    const { loginGoogle, t, i18n } = this.props;
+
+    const changeLanguage = lng => {
+      i18n.changeLanguage(lng);
+    };
+
     return (
       <Center>
         <div className="loginscreen">
+          <p>{t('login.chooseLanguage')}</p>
+          <button type="button" onClick={() => changeLanguage('en')}>
+            Enghlish
+          </button>
+          <button type="button" onClick={() => changeLanguage('es')}>
+            Español
+          </button>
+
           <div>
             <h1 className="logo-name">IH+</h1>
           </div>
-          <h3>Welcome to IH+</h3>
-          <p>Login in. To see it in action.</p>
+          <h3>{t('login.welcome')}</h3>
+          <p>{t('login.message')}</p>
           <button type="button" className="btn btn-block btn-social btn-foursquare" onClick={loginGoogle}>
             <span className="fab fa-google" />
-            Sign in with Google
+            {t('login.googleSignin')}
           </button>
           <p className="m-t">
-            <small>Or try</small>
+            <small>{t('login.orTry')}</small>
           </p>
           <form className="m-t">
             <div className="form-group">
-              <input type="email" className="form-control" placeholder="Username" required="" />
+              <input type="email" className="form-control" placeholder={t('username')} required="" />
             </div>
             <div className="form-group">
-              <input type="password" className="form-control" placeholder="Password" required="" />
+              <input type="password" className="form-control" placeholder={t('password')} required="" />
             </div>
             <button type="submit" className="btn btn-primary block full-width m-b">
-              Login
+              {t('login.sigin')}
             </button>
             <a href=" ">
-              <small>Forgot password?</small>
+              <small>{t('login.forgotPassword')}</small>
             </a>
             <p className="text-muted text-center">
-              <small>Do not have an account?</small>
+              <small>{t('login.notHaveAccount')}</small>
             </p>
             <a className="btn btn-sm btn-white btn-block" href="register.html">
-              Create an account
+              {t('login.createAccount')}
             </a>
           </form>
           <p className="m-t">
@@ -49,8 +64,13 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
-  loginGoogle: PropTypes.func.isRequired
+Login.defaultProps = {
+  t: () => {}
 };
 
-export default Login;
+Login.propTypes = {
+  loginGoogle: PropTypes.func.isRequired,
+  t: PropTypes.func
+};
+
+export default translate()(Login);
